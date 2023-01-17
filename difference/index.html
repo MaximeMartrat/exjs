@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Différence</title>
+</head>
+<body>
+    <h1>Différence</h1>
+    <script>
+        //Ecrire une fonction pour calculer la difference entre un nombre donné et 13 :
+        // si le nombre est supérieur à 13, on retourne le double de la différence , sinon on retourne la différence seule 
+
+        let nbre = prompt("Ecrivez un nombre");
+        function calcul() {
+            chiffre = nbre - 13
+            if ( chiffre > 13 ) {
+                result = chiffre*2
+                alert("le double de la différence est : " + result)
+                window.location.reload()
+            } else {
+                alert("la différence est : " + chiffre)
+                window.location.reload()
+            }
+        }
+        calcul(nbre)
+    </script>
+</body>
+</html>
