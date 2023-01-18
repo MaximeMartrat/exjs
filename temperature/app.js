@@ -7,8 +7,8 @@
             let froid = "froid.jpg"
             let chaud = "chaud.jpg"
             if (unit == "farenheit") {
-                result = (temp - 32) * 5/9
-                document.querySelector("h2").innerHTML = `${temp}°F font ${result.toFixed(2)}°Celsius`
+                result = (temp - 32) * 5/9;
+                document.querySelector("h2").innerHTML = `${temp}°Farenheit font ${result.toFixed(2)}°Celsius`
                 if (result <= 0) {
                     document.body.style.backgroundImage = `url(${froid})`
                     document.querySelector("h2").style.color = 'blue'
@@ -18,7 +18,7 @@
                 }
             } else if (unit == "celsius") {
                 result = temp * 9/5 + 32; 
-                document.querySelector("h2").innerHTML = `${temp}°Celsius font ${result.toFixed(2)}°F`
+                document.querySelector("h2").innerHTML = `${temp}°Celsius font ${result.toFixed(2)}°Farenheit`
                 if (result <= 32) {
                     document.body.style.backgroundImage = `url(${froid})`
                     document.querySelector("h2").style.color = 'blue'

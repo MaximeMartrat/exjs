@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Remplacer chaque caractère dans une chaine par son suivant dans l'alphabet
+        //ex :  char_push("bonjour") retourne "cpokpvs"
+        
+        let char = "un chasseur sachant chassé sans son chien"
+        let charsplited = char.split("");
+        for (let i = 0; i < charsplited.length; i++) {
+            let charCode = charsplited[i].charCodeAt(0)
+            if (charsplited[i] === " ") {
+                charsplited[i] = " ";
+            } else if (charsplited[i] === "z"){
+                charsplited[i] = "a";
+            } else {
+                charsplited[i] = String.fromCharCode(charCode + 1);
+            }
+        }
+        console.log(charsplited.join(''));
+    </script>
+</body>
+</html>
