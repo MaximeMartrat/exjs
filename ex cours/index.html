@@ -8,60 +8,155 @@
 </head>
 <body>
     <script>
-    //     //Transofrmer le tableau de chaînes en concaténant tous les éléments du tableau
-    //     const $mytab = ["Red", "Green", "White", "Black" ];
-    //     function transfo($tab, $sep){​
-    //         let $finch = "" ;
-    //         //Je boucle sur mes éléments avec tous les élts
-    //         for ( i = 0 ; i < $tab.length ; i++ ){​
-    //             if ( i== tab.length - 1 ){
-    //                 //cas particulier lorsqu'on est au dernier pour ne pas afficher le sep
-    //                 $finch += $tab[i] ;
-    //             } else {
-    //                 $finch += $tab[i] + $sep ;
-    //             }
-    //         }​
-    //     //retourne la chaîne finale qui stocke la variable finale
-    //     return $finch ;
-    //     }​
-    // //On appelle la fonction avec l'argument [le séparateur comme demandé dans la consigne]
-    // let $resul = transfo($mytab, " + ")
-    // console.log($resul)
-    // //avec un séparateur passé en argument ;
+        //Transofrmer le tableau de chaînes en concaténant tous les éléments du tableau
+        //const $mytab = ["Red", "Green", "White", "Black" ];
+        //   function transfo($tab, $sep){​
+        //      let $finch = "" ;
+        //        //Je boucle sur mes éléments avec tous les élts
+        //        for ( i = 0 ; i < $tab.length ; i++ ){​
+        //           if ( i== tab.length - 1 ){
+        //             //cas particulier lorsqu'on est au dernier pour ne pas afficher le sep
+        //             $finch += $tab[i] ;
+        //           } else {
+        //               $finch += $tab[i] + $sep ;
+        //           }
+        //         }​
+        //     //retourne la chaîne finale qui stocke la variable finale
+        //     return $finch ;
+        //     }​
+        // //On appelle la fonction avec l'argument [le séparateur comme demandé dans la consigne]
+        // let $resul = transfo($mytab, " + ")
+        // console.log($resul)
+        // //avec un séparateur passé en argument ;
 
-    //ecrire une fonction js pour additionner tous les chiffres présents dans une chaine mixte(type 'kjhd2hjh3hdjeh4hbd2')
+
+
+        //ecrire une fonction js pour additionner tous les chiffres présents dans une chaine mixte(type 'kjhd2hjh3hdjeh4hbd2')
+        
+        // $machaine="qhuf5bfbs1gj4quifh8fjbe2"
+        // let $myArray = $machaine.split("");
+        // let $sum = 0;
+        // for (i=0 ; i < $myArray.length ; i++) {
+        //     let $tab = parseInt($myArray[i])
+        //     if (isNaN($tab) != true) {
+        //         $sum += $tab
+        //     } 
+        // }
+        // console.log("le total des nombres est : " + $sum)
+
+
+
+            //ecrire une fonction js pour vérifier qu'un entier donné > 100 comporte bien des chiffres en ordre croissant :
+            //123=true
+            //132=false
+
+            // function calcul(e) {
+            //     e+="";
+            //     let tab = e.split("")
+            //     for(i = 0 ; i< tab.length ; i++){
+            //         if (parseInt(tab[i-1]) > parseInt(tab[i])){
+            //             return false;
+            //         }
+            //     }
+            //     return true;
+            // }
+            // let nbre = prompt("donner un nombre supérieur à 100")
+
+            // calcul(nbre)
+            // console.log(calcul(nbre))    
+            
+            //écrire une fonction js pour supprimer tous les caractères qui reviennent plus d'une fois dans la chaine(chiffre ou lettre). la fonction retournera la chaine néttoyée.
+
+
+
+        //     // Definir la chaine
+        // let chaine="hn46jutjut1516jgk";
+        // // Déclaration de la fonction
+        // function tri(chaine_test) {
+        //     // Passer la chaine dans un tableau
+        //     let chaine_split=chaine_test.split("");
+        //     // Definir la variable de stockage
+        //     resultat="";
+        //     for (i=0; i < chaine_split.length; i++) {
+        //         // Premiere occurence de la lettre
+        //         let char_debut = chaine_test.indexOf(chaine_split[i]);
+        //         // Dernier occurence de la lettre
+        //         let char_fin = chaine_test.lastIndexOf(chaine_split[i]);
+        //         // Comparaison si présence une fois
+        //         if (char_debut == char_fin){
+        //             // s'il apparait une seule fois alors on stocke dans variable 'resultat'
+        //             resultat += chaine_split[i];
+        //         }
+        //     }
+        // // Retourne le resultat
+        //     return resultat;
+        // }
+        // // Declaration de la variable, resultat de la fonction
+        // let tri_final = tri(chaine);
+        // // Afficher le resultat
+        // console.log(tri_final);
+
+
+        // let library = [
+        // { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+        // { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+        // { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+        // ];
+
+        // for (let index = 0; index < library.length; index++) {
+        //     let newname = "auth"+index;
+        //     library[index][newname] = "truc" ;
+        // }
+        // console.log(library) ;
+
+        // let multidim_arr = [
+        //     [1, 2, 3],
+        //     [4, 5, 6],
+        //     [7, [ 7, 8, 9], 9]
+        // ]
+        // //on insère directement un tableau dans le tableau en lui ajoutant à la position voulu
+        // multidim_arr[0][1] = ["tutu","toto"]
+        // console.log(multidim_arr);
+
+        
     
-    
-    // $machaine="qhuf5bfbs1gj4quifh8fjbe2"
-    // let $myArray = $machaine.split("");
-    // let $sum = 0;
-    // for (i=0 ; i < $myArray.length ; i++) {
-    //     let $tab = parseInt($myArray[i])
-    //     if (isNaN($tab) != true) {
-    //         $sum += $tab
-    //     } 
-    // }
-    // console.log("le total des nombres est : " + $sum)
 
-    //ecrire une fonction js pour vérifier qu'un entier donné > 100 comporte bien des chiffres en ordre croissant :
-    //123=true
-    //132=false
+        let arr1 = [['1','2','3'], 24, 18000];
+        let arr2 = ["EFG", 30, [[1,2],[3,4],[5,6]]];
+        let arr3 = ["IJK", 28, 41000];
+        let arr4 = ["EFG", [['A','B'],['C','D']], 28000];
+        let arr5 = ["EFG", arr3, 35000];
+        let complex = [arr1, arr2, arr3, arr4, arr5];
 
-    function calcul(e) {
-        e+="";
-        let tab = e.split("")
-        for(i = 0 ; i< tab.length ; i++){
-            if (parseInt(tab[i-1]) > parseInt(tab[i])){
-                return false;
+        //faire une fonction js pour explorer le tableau complexe
+        //afficher chaque element affichable (chaine ou nommbre)
+        //si l'élément est un tableau, entrer dans le tableau pour le parcourir
+
+        function testArray(e) {
+            return e
+            for (let i = 0; i < e.length; i++) {
+                let tab = e[i];
+                return tab
+                if (Array.isArray(tab)){
+                    for (let j = 0 ; j< tab.length; j++) {
+                        let tab2 = tab[j];
+                        return tab2
+                        if (Array.isArray(tab2)) {
+                            for (let k =0 ; k< tab2.length; k++){
+                                let tab3 = tab2[k]
+                                return tab3
+                            }
+                        }
+                    }
+                }
             }
         }
-        return true;
-    }
-    let nbre = prompt("donner un nombre supérieur à 100")
+        console.log(testArray(complex))
+        
+        //Concevoir une fonction qui convertit les températures entre °celsius et farenheit
+        //tip: c/5=(f-32)/9 -> exprimer l'un en fonction de l'autre
 
-    calcul(nbre)
-    console.log(calcul(nbre))       
 
-</script>
+    </script>
 </body>
 </html>
