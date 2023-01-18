@@ -43,8 +43,25 @@
     // }
     // console.log("le total des nombres est : " + $sum)
 
+    //ecrire une fonction js pour vérifier qu'un entier donné > 100 comporte bien des chiffres en ordre croissant :
+    //123=true
+    //132=false
 
-    //Ecrire une fonction pour calculer la difference entre un nombre donnné et 13 si le nombre est supérieur à 13, on retourne le double de la différence, sinon on retouurne la différence seule
+    function calcul(e) {
+        e+="";
+        let tab = e.split("")
+        for(i = 0 ; i< tab.length ; i++){
+            if (parseInt(tab[i-1]) > parseInt(tab[i])){
+                return false;
+            }
+        }
+        return true;
+    }
+    let nbre = prompt("donner un nombre supérieur à 100")
+
+    calcul(nbre)
+    console.log(calcul(nbre))       
+
 </script>
 </body>
 </html>
