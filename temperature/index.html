@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Températures</title>
 </head>
 <body>
-    <script>
-        //Concevoir une fonction qui convertit les températures entre °celsius et farenheit
-        //tip: c/5=(f-32)/9 -> exprimer l'un en fonction de l'autre
+    <div id="box">
+        <h1>Températures</h1>
 
-        
-    </script>
+        <!--<label for="temp">Choisis la température</label><br>-->
+        <input type="number" id="temp" placeholder="15">
+        <select name="unit" id="unit">
+            <option value="farenheit">°farenheit</option>
+            <option value="celsius">°celsius</option>
+        </select><br>
+        <button onclick="convert()">Valider</button>
+
+        <h2></h2>
+    </div>
 </body>
 </html>
