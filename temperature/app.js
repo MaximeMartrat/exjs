@@ -1,8 +1,11 @@
 //Concevoir une fonction qui convertit les températures entre °celsius et farenheit
-        //tip: c/5=(f-32)/9 -> exprimer l'un en fonction de l'autre
+//tip: c/5=(f-32)/9 -> exprimer l'un en fonction de l'autre
+let retour = document.getElementById("return");
         function convert() {
+            box.style.display = "none";
             let temp = document.getElementById("temp").value;
             let unit = document.getElementById("unit").value;
+            retour.style.display = "block";
             let result = 0;
             let froid = "froid.jpg"
             let chaud = "chaud.jpg"
@@ -28,3 +31,5 @@
                 }
             }
         }
+      
+       
