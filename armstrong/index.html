@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //les nombres d'Armstrong :
+        //trouvez tous les nombres d'Armstrong à 3 chiffres :
+        //un nombre est dit d'Armstrong quand la somme du cube de ses chiffres est égale au chiffre lui-même , par exemple 371 : 3**3 + 7**3 + 1**3 = 371
+        
+        let nbre = 999;
+        let total = " ";
+        //on fait une boucle pour vérifier tous les nombres entre 100 et 999
+        for (i=100; i<nbre ; i++) {
+            //on utilise la methode Math.floor pour isoler chaque chiffres du nombre et on les mets au cube avant de les ajouter
+            let chiffre = (Math.floor(i/100)**3)+(Math.floor((i/10)%10)**3)+(Math.floor((i)%10)**3)
+            //on vérifie si les sommes sont égale au nombre de départ et si oui on les ajoute au total
+            if (chiffre === i) {
+                total = total + chiffre + " , "
+            }
+        }
+        console.log("les nombres à trois chiffres d'Armstrong sont : " + total.slice(0, total.length-2))
+        
+    </script>
+</body>
+</html>

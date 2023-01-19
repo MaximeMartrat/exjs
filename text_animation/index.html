@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text"> les.élèves.de.l'académie.Beweb.sont.priés.de.pisser.du.code. </p>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            background-color: #1D1D1B;
+        }
+        p{
+            margin-top: 350px;
+            text-align: center;
+            font-size: 50px;
+            color: #DB1342;
+        }
+    </style>
+    <script>
+        //Fabriquer une animation qui fait "tourner" un texte en enlevant periodiquement (100ms) une lettre à la fin d'une chaine et en la replaçant au début de la chaine :
+        // "ma super chaine "
+        // " ma super chaine"
+        // "e ma super chain"
+        // 'ne ma super chai"
+        // "ine ma super cha"
+        // "aine ma super ch"
+        // etc ...
+
+        //je selectionne l'élément contenant le texte
+        const element = document.getElementById("text")
+
+        //je crée une fonction pour animer le texte
+        function animer() {
+            //je récupère le texte de l'élément
+            let texte = element.innerText;
+            //j'efface le dernier caractère et le rajoute au début
+            element.innerText = texte.substring(1) + texte.substring(0, 1);
+        }
+        //j'appelle la fonction toute les 100 millisecondes
+        setInterval(animer, 100);
+        
+    </script>
+</body>
+</html>

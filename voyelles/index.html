@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyelles</title>
+</head>
+<body>
+    <script>
+        //Trouver dans une chaine (saisie input ou argument) le nombre de voyelles
+        let chaine = prompt("Ecrivez des mots")
+        let count = 0;
+        for ( let i in chaine ) {
+                switch(chaine[i]){
+                    case "a" : count++
+                    break
+                    case "e" : count++
+                    break
+                    case "i" : count++
+                    break
+                    case "o" : count++
+                    break
+                    case "u" : count++
+                    break
+                    case "y" : count++
+                    default : count = count
+                    break
+                }
+            }
+        console.log(`Il y a ${count} voyelles dans la déclaration "${chaine}"`)
+
+        //correction simplifiée
+        //ch = "aeizrghqgtipowy" ;
+        //voy = "aeiouy" ;
+        //function count_voy(c){
+        //   let counter = 0 ;
+        //   for( let i in c) {
+        //      if( voy.includes(ch[i]) ) { counter++ ; }
+        //   }
+        //   return counter
+        //}
+        
+        // console.log(count_voy(ch));
+    </script>
+</body>
+</html>
