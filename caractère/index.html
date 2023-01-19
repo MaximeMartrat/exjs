@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
 </head>
 <body>
     <h1></h1>
@@ -16,7 +16,7 @@
         function melange(e){
             let charsplited = e.split("");
             for (let i = 0; i < charsplited.length; i++) {
-                let charCode = charsplited[i].charCodeAt(0)
+                let charCode = charsplited[i].charCodeAt()
                 if (charsplited[i] === " ") {
                     charsplited[i] = " ";
                 } else if (charsplited[i] === "z"){
@@ -26,8 +26,8 @@
                 }
             }
             document.querySelector("h1").innerHTML = charsplited.join('');
-    }
-    melange(char);
+        }
+        melange(char);
     </script>
 </body>
 </html>

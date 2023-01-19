@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombres heureux</title>
+</head>
+<body>
+
+    <script>
+        //un nombre joyeux est un nombre qui répond aux normes suivantes :
+        //on remplace le nombre par la somme des carrés de chacun de ses chiffres , et on continue jusqu'a obtenir 1 ou qu'il repete une sequence infinie . Ceux dont la sequence finit avec 1 sont déclarés joyeux, les autres sont des nombres tristes ...
+        //Implémentez la fonction JS pour trouver les 5 premiers nombres joyeux
+        function nombreHeureux (nb) {
+        // on convertit le nombre en chaîne afin d'évaluer les chiffres un à un
+            nb=nb.toString();
+            let total=0;
+ 
+        // on entre dans une boucle do-while afin de ne pas être bloqué dans une boucle infinie quand le total n'a plus qu'un chiffre
+        do {
+            // on fait la somme des carrés de chaque chiffre et on l'ajoute au toal
+            for ( let i=0; i<nb.length; i++){
+            total+=Math.pow(parseInt(nb[i]), 2);
+            }
+ 
+            // on met à jour le nombre avec le total obtenu
+            nb = total.toString();
+            // on sait que le nombre est malheureux s'il est égal à l'un des nombres suivants
+            if (total === 4 || total === 16 | total === 37 || total === 58 || total === 89 || total === 145 || total === 42 || total === 20){
+                return false;
+            }
+            // on réinitialise le total si on doit faire un nouveau tour de boucle
+            total=0;
+ 
+        } while (nb.length > 1);
+ 
+        return parseInt(nb) === 1;
+    }
+
+    </script>
+</body>
+</html>

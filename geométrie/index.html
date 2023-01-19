@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geométrie</title>
+</head>
+<body>
+    <script>
+        //determiner si un point (a,b) est contenu dans un cercle de centre x,y et de rayon r
+        function check_point(a,b,x,y,r){
+            let dist_points = (a-x)*(a-x) + (b-y)*(b-y) ;
+            let R = r*r ;
+            if(dist_points < R){
+                return true ;
+            }
+            return false
+            //return true || false
+        }
+
+        console.log(check_point(10,10,15,15,20))
+    </script>
+</body>
+</html>

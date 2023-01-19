@@ -10,8 +10,8 @@ function convert() {
     let froid = "froid.jpg"
     let chaud = "chaud.jpg"
     if (unit == "farenheit") {
-        result = (temp - 32) * 5/9;
-        document.querySelector("h2").innerHTML = `${temp}°F  >  ${result.toFixed(2)}°C`
+        result = Math.round((temp - 32) * 5/9);
+        document.querySelector("h2").innerHTML = `${temp}°F  >  ${result}°C`
         if (result <= 0) {
             document.body.style.backgroundImage = `url(${froid})`
             document.querySelector("h2").style.color = 'blue'
@@ -20,8 +20,8 @@ function convert() {
             document.querySelector("h2").style.color = 'red'
         }
     } else if (unit == "celsius") {
-        result = temp * 9/5 + 32; 
-        document.querySelector("h2").innerHTML = `${temp}°C  >  ${result.toFixed(2)}°F`
+        result = Math.round(temp * 9/5 + 32); 
+        document.querySelector("h2").innerHTML = `${temp}°C  >  ${result}°F`
         if (result <= 32) {
             document.body.style.backgroundImage = `url(${froid})`
             document.querySelector("h2").style.color = 'blue'
