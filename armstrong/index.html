@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Armstrong</title>
 </head>
 <body>
+    <h1>Armstrong</h1>
+
+    <p id="rep"></p>
+    <style>
+        body{
+            margin-top: 50px;
+            text-align: center;
+            color: #DB1342;
+            background-color: #1D1D1B;
+        }
+        h1{
+            font-size: 100px;
+        }
+        p{
+            font-size: 50px;
+            margin-top: 200px;
+        }
+    </style>
     <script>
         //les nombres d'Armstrong :
         //trouvez tous les nombres d'Armstrong à 3 chiffres :
@@ -23,7 +41,18 @@
                 total = total + chiffre + " , "
             }
         }
-        console.log("les nombres à trois chiffres d'Armstrong sont : " + total.slice(0, total.length-2))
+        document.getElementById("rep").innerHTML = "_les_nombres_à_trois_chiffres_d'Armstrong_sont_:_" + total.slice(0, total.length-2) ;
+
+        const element = document.getElementById("rep")
+        function animer() {
+            //je récupère le texte de l'élément
+            let texte = element.innerText;
+            //j'efface le dernier caractère et le rajoute au début
+            element.innerText = texte.substring(1) + texte.substring(0, 1);
+        }
+        //j'appelle la fonction toute les 100 millisecondes
+        setInterval(animer, 200);
+        
         
     </script>
 </body>

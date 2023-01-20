@@ -7,9 +7,54 @@
     <title>Voyelles</title>
 </head>
 <body>
+
+    <h1>Voyelles</h1>
+
+    <label for="quest">Ecrivez des mots</label><br>
+    <input type="text" id="chaine" placeholder="ce que vous voulez">
+    <button id="valid" onclick="result()">Valider</button>
+    <p></p>
+    <style>
+        body{
+            text-align: center;
+            line-height: 50px;
+            color: #DB1342;
+            background-color: #1D1D1B;
+        }
+        h1{
+            font-size: 70px;
+        }
+        label{
+            font-size: 30px;
+        }
+        input{
+            font-size: 20px;
+            width: 400px;
+            border:2px solid #DB1342; 
+            color: #DB1342;
+            background-color: #1D1D1B;
+            border-radius: 5px;
+        }
+        button{
+            font-size: 20px;
+            color: #1D1D1B;
+            border-radius: 5px;
+            background-color: #DB1342;
+            border:2px solid #DB1342;
+        }
+        button:hover{
+            color: #DB1342;
+            background-color: #1D1D1B;
+        }
+        p{
+            font-size: 30px;
+        }
+    </style>
     <script>
         //Trouver dans une chaine (saisie input ou argument) le nombre de voyelles
-        let chaine = prompt("Ecrivez des mots")
+        
+       function result () {
+        let chaine = document.getElementById("chaine").value
         let count = 0;
         for ( let i in chaine ) {
                 switch(chaine[i]){
@@ -28,8 +73,8 @@
                     break
                 }
             }
-        console.log(`Il y a ${count} voyelles dans la déclaration "${chaine}"`)
-
+        document.querySelector("p").innerHTML = `Il y a ${count} voyelles dans la déclaration "${chaine}"`
+        }
         //correction simplifiée
         //ch = "aeizrghqgtipowy" ;
         //voy = "aeiouy" ;
