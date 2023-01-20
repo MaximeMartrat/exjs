@@ -8,6 +8,7 @@ body{
     background-image: url("meteo.png");
     transition-duration: 0.5s;
     transition-property: display, background-image;
+    
 }
 #box{
     background-color: rgb(159, 185, 171);

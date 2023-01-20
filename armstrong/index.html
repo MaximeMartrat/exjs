@@ -43,16 +43,15 @@
         }
         document.getElementById("rep").innerHTML = "_les_nombres_à_trois_chiffres_d'Armstrong_sont_:_" + total.slice(0, total.length-2) ;
 
-        const element = document.getElementById("rep")
+        const element = document.getElementById("rep");
         function animer() {
             //je récupère le texte de l'élément
             let texte = element.innerText;
-            //j'efface le dernier caractère et le rajoute au début
+            //j'efface le premier caractère et le rajoute à la fin
             element.innerText = texte.substring(1) + texte.substring(0, 1);
         }
         //j'appelle la fonction toute les 100 millisecondes
-        setInterval(animer, 200);
-        
+        setInterval(animer, 100);
         
     </script>
 </body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age</title>
+</head>
+<body>
+    <h1>Age</h1>
+    <input id="naissance" type="text" placeholder="indiquez votre année de naissance" style="width:50%">
+    <input id="btn" type="button" value="OK">
+    <p id="result"></p>
+    <div id="colored">
+        <input id="btn2" type="button" value="couleur">
+    </div>
+    <a href="https://www.toto.com" class="href"></a>
+    <a href="https://www.tata.com" class="href"></a>
+    <a href="https://www.tutu.com" class="href"></a>
+    
+    <input id="btn3" type="button" value="lien">
+
+    <p id="ancre"></p>
+    <style>
+        body{
+            margin: auto;
+        }
+        #colored{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        /*
+        Ecrire un programme qui permet le calcul d'un âge en fonction de la date de l'année de naissance saisie dans un input
+        */
+
+        // naissance.addEventListener("change", ()=>{
+        //     console.log("objet modifié");
+        // }) ;
+    
+        btn.addEventListener('click', ()=>{
+            let resultat = document.getElementById("result")
+            let an = document.getElementById("naissance").value
+            let age = 0;
+            let today = 2023
+            age = today - an
+            resultat.innerHTML = `Vous avez ${age} ans`
+        })
+
+        //changer la couleur de fond d'une div avec le clic d'un bouton
+        btn2.addEventListener('click', ()=>{
+            colored.style.backgroundColor = "blue"; 
+        })
+        //sur le clic d'un bouton récupérer les attributs href d'une série de 3 liens présents sur la page
+        btn3.addEventListener('click', ()=>{
+            let linkTab = ["toto.fr", "titi.fr", "zaza.fr"] ;
+            let linkList = document.getElementsByTagName('a') ; 
+
+            for (let i = 0; i < linkList.length; i++) {
+                linkList[i].href = linkTab[i] ;
+                document.getElementById("ancre").innerHTML += ` ${linkList[i].href} ` ;
+            }
+        })
+    </script>
+</body>
+</html>

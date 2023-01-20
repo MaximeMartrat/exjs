@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="text"> les élèves de l'académie Beweb sont priés de pisser du code </p>
+    <p id="mytext"> les élèves de l'académie Beweb sont priés de pisser du code </p>
     <style>
         body{
             padding:0;
@@ -32,18 +32,39 @@
         // etc ...
 
         //je selectionne l'élément contenant le texte
-        const element = document.getElementById("text")
+        // const element = document.getElementById("mytext")
 
-        //je crée une fonction pour animer le texte
-        function animer() {
-            //je récupère le texte de l'élément
-            let texte = element.innerText;
-            //j'efface le dernier caractère et le rajoute au début
-            element.innerText = texte.substring(1) + texte.substring(0, 1);
-        }
-        //j'appelle la fonction toute les 100 millisecondes
-        setInterval(animer, 100);
+        // //je crée une fonction pour animer le texte
+        // function animer() {
+        //     //je récupère le texte de l'élément
+        //     let texte = element.innerText;
+        //     //j'efface le premier caractère et le rajoute à la fin
+        //     element.innerText = texte.substring(1) + texte.substring(0, 1);
+        // }
+        // //j'appelle la fonction toute les 100 millisecondes
+        // setInterval(animer, 100);
         
+
+        /*correction*/
+            window.onload = animate_string();
+
+            function animate_string(){
+                //récupérer l'élément HTML qui contient le texte
+                let element = document.getElementById("mytext");
+                //element.innerText = "nouveau texte" ;
+                let textNode = element.childNodes[0] ;
+                //recuperer le texte lui-même
+                let text = textNode.data ;
+                //animer le texte : dans un setInterval
+                setInterval(()=>{
+                    //sens du texte : G->D : dernier en premier, D-G : premier en dernier
+                    text = text[text.length-1] + text.substring(0,text.length -1) ;
+                    //remettre le texte dans l'élément de départ
+                    textNode.data = text ;
+                    //recommencer jusquu'à la fin des temps ...
+                },250)
+            }
+    
     </script>
 </body>
 </html>
