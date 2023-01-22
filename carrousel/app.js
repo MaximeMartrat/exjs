@@ -21,7 +21,7 @@ function previous(){
 };
 //je créer un écouteur d'évènement au clic sur le bouton prev pour lancer la fonction previous
 prev.addEventListener('click', previous)
-//je crée un ecouteur d'évènement sur la touche flèche gauche dans le body avec son keyCode "37" pour lancer la fonction previous
+//je crée un ecouteur d'évènement sur la touche flèche gauche dans le body avec son key "ArrowLeft" pour lancer la fonction previous
 document.body.addEventListener('keydown', (e) => {
     if (e.key === "ArrowLeft") {
         previous();
@@ -39,7 +39,7 @@ function theNext (){
 };
 //je créer un écouteur d'évènement au clic sur le bouton next pour lancer la fonction theNext
 next.addEventListener('click', theNext)
-//je crée un écouteur d'évènement sur la touche flèche droite dans le body en utilisant son keyCode "39" pour lancer la fonction theNext
+//je crée un écouteur d'évènement sur la touche flèche droite dans le body en utilisant son key "ArrowRight" pour lancer la fonction theNext
 document.body.addEventListener('keydown', (e) => {
     if (e.key === "ArrowRight") {
         theNext();
