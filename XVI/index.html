@@ -7,62 +7,99 @@
     <title>Chiffres romains</title>
 </head>
 <body>
+    <h1>CHIFFRES ROMAINS</h1>
+
+    <p>ECRIVEZ LE NOMBRE A CONVERTIR</p><br> 
+    <input type="number" name="nombre" id="nombre" placeholder="1254">
+    <button id="valid">BONUM</button><br>
+    <p id="result"></p>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
+        body{
+            font-family: 'Della Respira', serif;
+            text-align: center;
+            background-image: url('./pierre.jpg');
+            background-size: cover;
+            }
+        h1{
+            margin: 100px;
+            font-size: 100px;
+            color: rgb(99, 97, 85);
+            opacity: 0.8;
+            text-shadow: 2px 2px #000;
+        }
+        label{
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(99, 97, 85);
+            text-shadow: 2px 2px #000;
+        }
+        input{
+            height: 20px;
+            padding: 10px;
+            font-size: 20px;
+            background-color:rgba(229, 217, 206, 0.466);
+            border: 2px solid rgb(99, 97, 85);
+            border-radius: 3px;
+        }
+        button{
+            height: 43px;
+            padding: 10px;
+            font-size: 20px;
+            background-color:rgb(99, 97, 85);
+            color: rgb(229, 217, 206);
+            border: 1px solid rgba(114, 111, 98, 0.754);
+            border-radius: 3px;
+        }
+        button:hover{
+            background-color: rgb(229, 217, 206);
+            color: rgb(99, 97, 85);
+        }
+        p{
+            font-size: 50px;
+            font-weight: bold;
+            color: rgb(99, 97, 85);
+            opacity: 0.8;
+            text-shadow: 2px 2px #000;
+        }
+      </style>
     <script>
         /*
         Implémentez la fonction JS qui retourne un chiffre arabe passé en argument en chiffre romain :
         ex : 1372 -> MCCCLXXII
         */
         
-        // let num = prompt("Entrez un nombre")
-
-        // function convertInRoman (num) {
-        //     let count = "";
-        //     while (num > 0) {
-        //         if (num >= 1000){
-        //             count += "M";
-        //             num -= 1000;
-        //         } else if ( num == 900 ) {
-        //             count += "CM";
-        //             num -= 900;
-        //         } else if (num >= 500) {
-        //             count += "D";
-        //             num -= 500;
-        //         } else if ( num == 400 ){
-        //             count += "CD" ;
-        //             num -= 400;
-        //         } else if (num >= 100) {
-        //             count += "C";
-        //             num -= 100;
-        //         } else if ( num == 90){
-        //             count += "XC";
-        //             num -= 90 ;  
-        //         } else if ( num >= 50) {
-        //             count += "L";
-        //             num -= 50;
-        //         } else if ( num === 40 ){
-        //             count += "XL"
-        //             num -= 40;
-        //         } else if ( num >= 10 && num < 40) {
-        //             count += "X";
-        //             num -= 10;
-        //         } else if (num == 9) {
-        //             count += "IX";
-        //             num -= 9;
-        //         } else if (num >= 5) {
-        //             count += "V";
-        //             num -= 5;
-        //         } else if (num == 4) {
-        //             count += "IV";
-        //             num -= 4;
-        //         } else {
-        //             count += "I";
-        //             num -= 1;
-        //         } 
-        //     }
-        //     return count;
-        // }
-        // console.log(convertInRoman(num));
-
+        let bouton = document.getElementById("valid")
+        
+        function convertToRoman(num){
+            const romanNumb = { 
+                "M" : 1000 ,
+                "CM" : 900 ,
+                "D" : 500 ,
+                "CD" : 400 ,
+                "C" : 100 ,
+                "XC" : 90 ,
+                "L" : 50 ,
+                "XL" : 40 ,
+                "X" : 10 ,
+                "IX" : 9 ,
+                "V" : 5 ,
+                "IV" : 4 ,
+                "I" : 1
+            }
+            let count = "";
+            for (const[key, value] of Object.entries(romanNumb)){
+                while (num >= value){
+                    count += key;
+                    num -= value;
+                } 
+            }
+            return count
+        }    
+        bouton.addEventListener('click', ()=>{
+            let chiffre = document.getElementById("nombre").value;
+            document.getElementById("result").innerHTML = convertToRoman(chiffre);
+        })
     </script>
 </body>
 </html>
