@@ -70,7 +70,7 @@
         */
         
         let bouton = document.getElementById("valid")
-        
+        //je créer un objet avec pour clé les chiffres romains et pour valeur leur correspondance
         function convertToRoman(num){
             const romanNumb = { 
                 "M" : 1000 ,
@@ -87,6 +87,7 @@
                 "IV" : 4 ,
                 "I" : 1
             }
+            //j'initialise un compteur vide puis je fais une boucle en utilisant la methode entries pour créer un tableau à partir de mon objet qui aura pour constantes les clés et valeurs. 
             let count = "";
             for (const[key, value] of Object.entries(romanNumb)){
                 while (num >= value){
@@ -95,7 +96,8 @@
                 } 
             }
             return count
-        }    
+        }
+        //J'appelle ma fonction avec addEventListener sur mon bouton    
         bouton.addEventListener('click', ()=>{
             let chiffre = document.getElementById("nombre").value;
             document.getElementById("result").innerHTML = convertToRoman(chiffre);
