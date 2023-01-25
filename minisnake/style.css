@@ -13,8 +13,8 @@ body{
 }
 #target{
     border: 1px solid black;
-    width: 10%;
-    height: 10%;
+    width: 11%;
+    height: 11%;
     position: relative;
 }
 #game{

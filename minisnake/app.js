@@ -8,7 +8,7 @@ let targetX = Math.random()*90;
 let targetY = Math.random()*90;
 let winX = targetX;
 let winY = targetY +10;
-let speed = 5;
+let speed = 3;
 let score = 0;
 let loose = 0;
 function moveSnake() {
@@ -38,7 +38,7 @@ function win(){
         score += 1;
         afficherScore.innerHTML = `Score : ${score}`; 
     } else {
-        snake.style.backgroundColor = "black"
+        snake.style.backgroundColor = "black";
     }
 }
 function lose(){
